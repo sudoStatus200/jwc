@@ -46,9 +46,9 @@ public class WordCount {
         long totalWords = 0;
         if (lines != null && !lines.isEmpty()) {
             totalWords = lines.stream()
-                    .map(l -> l.trim().split("[\\s]"))
+                    .map(l -> l.split("[\\s]"))
                     .flatMap(Arrays::stream)
-                    .filter(l -> l.trim().equals(""))
+                    .filter(l -> l.trim().isEmpty())
                     .count();
 
         }
