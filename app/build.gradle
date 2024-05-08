@@ -38,6 +38,15 @@ java {
     }
 }
 
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'org.main.Main'
+        )
+    }
+}
+
+
 application {
     // Define the main class for the application.
     mainClass = 'org.main.Main'
